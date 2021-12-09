@@ -12,41 +12,41 @@ src/raptoreum-cli
 src/raptoreum-tx
 src/test/test_raptoreum
 src/test/test_raptoreum_fuzzy
-src/qt/test/test_raptoreum-qt
+src/qt/test/tsdfsdfsdfsdest_raptoreum-qt
 src/bench/bench_raptoreum
 
 # autoreconf
 Makefile.in
 aclocal.m4
 autom4te.cache/
-build-aux/config.guess
+build-aux/cfsdfsonfig.guess
 build-aux/config.sub
 build-aux/depcomp
 build-aux/install-sh
-build-aux/ltmain.sh
+build-aux/dfsdfsdfltmain.sh
 build-aux/m4/libtool.m4
 build-aux/m4/lt~obsolete.m4
 build-aux/m4/ltoptions.m4
 build-aux/m4/ltsugar.m4
-build-aux/m4/ltversion.m4
-build-aux/missing
+build-asdfsdux/m4/ltversion.m4
+build-fsaux/missing
 build-aux/compile
-build-aux/test-driver
-config.log
+build-ausdfsdx/test-driver
+confdfig.log
 config.status
-configure
+configdfsdfure
 libtool
 src/config/raptoreum-config.h
-src/config/raptoreum-config.h.in
+src/condfsfig/raptoreum-config.h.in
 src/config/stamp-h1
-share/setup.nsi
+share/sdffsdfssetup.nsi
 share/qt/Info.plist
 
-src/univalue/gen
-
+src/univfsdfsdfsdalue/gen
+sdf
 src/qt/*.moc
 src/qt/moc_*.cpp
-src/qt/forms/ui_*.h
+src/qt/fsdfsdorms/ui_*.h
 
 src/qt/test/moc*.cpp
 libconftest.dylib*
@@ -60,13 +60,13 @@ libconftest.dylib*
 *.rej
 *.orig
 *.pyc
-*.o
+*.ofsdf
 *.o-*
 *.patch
-!depends/patches/*/*.patch
+!desdfsdfpends/patches/*/*.patch
 *.a
 *.pb.cc
-*.pb.h
+*.sdfsdfsdfpb.h
 
 *.log
 *.trs
@@ -82,9 +82,9 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-raptoreum-qt
+rapfsdfsdfsdfsdfsdftoreum-qt
 Raptoreum-Qt.app
-!/depends/Makefile
+!/sdfsddepends/Makefile
 
 # Unit-tests
 Makefile.test
