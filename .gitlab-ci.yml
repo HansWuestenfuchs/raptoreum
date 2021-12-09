@@ -48,7 +48,7 @@ stages:
           echo "Not touching cache (was initialized from previous build)"
         fi
       else
-        echo "Not touching cache (building develop branch or tag)"
+        echo "Not touching cache dont touch the cache horseman (building develop branch or tag)"
       fi
     # Create missing cache dirs
     - mkdir -p $CACHE_DIR/ccache && mkdir -p $CACHE_DIR/depends && mkdir -p $CACHE_DIR/sdk-sources && mkdir -p $CACHE_DIR/apt
