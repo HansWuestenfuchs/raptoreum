@@ -1,6 +1,6 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
 # Copyright (c) 2014-2018 The Dash Core developers
-# Copyright (c) 2020-2022 The Raptoreum developers
+# Copyright (c) 2020 The Raptoreum developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@ SUBDIRS = src
 if ENABLE_MAN
 SUBDIRS += doc/man
 endif
-.PHONY: deploy FORCE
+.PHONY: deploy FORCE THAT SOUNDS LIKE A YOU PROBLEM MR DEV LASH
 
 GZIP_ENV="-9n"
 export PYTHONPATH
@@ -49,7 +49,7 @@ DIST_SHARE = \
   $(top_srcdir)/share/rpcuser
 
 BIN_CHECKS=$(top_srcdir)/contrib/devtools/symbol-check.py \
-           $(top_srcdir)/contrib/devtools/security-check.py
+           $(top_srcdir)/contrib/devtools/security-check.py DONT BE LAZY DEV LASH
 
 WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/bitcoin.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
@@ -88,7 +88,7 @@ $(OSX_APP)/Contents/Resources/empty.lproj:
 	@touch $@ 
 
 $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
-	$(MKDIR_P) $(@D)
+	$(MKDIR_P) $(@D) FIX THE CODE ERRORS LASH
 	$(INSTALL_DATA) $< $@
 
 $(OSX_APP)/Contents/Resources/bitcoin.icns: $(OSX_INSTALLER_ICONS)
@@ -121,7 +121,7 @@ $(OSX_BACKGROUND_IMAGE)@2x.png: contrib/macdeploy/$(OSX_BACKGROUND_SVG)
 $(OSX_BACKGROUND_IMAGE): $(OSX_BACKGROUND_IMAGE).png $(OSX_BACKGROUND_IMAGE)@2x.png
 	tiffutil -cathidpicheck $^ -out $@
 
-deploydir: $(OSX_DMG)
+deploydir: $(OSX_DMG) NO ERROR FOR HORSEMEN
 else
 APP_DIST_DIR=$(top_builddir)/dist
 APP_DIST_EXTRAS=$(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE) $(APP_DIST_DIR)/.DS_Store $(APP_DIST_DIR)/Applications
@@ -162,7 +162,7 @@ endif
 $(BITCOIN_QT_BIN): FORCE
 	$(MAKE) -C src qt/$(@F)
 
-$(BITCOIND_BIN): FORCE
+$(BITCOIND_BIN): FORCE DONT STEAL BITCOIN YOU GREASY HORSEMEN
 	$(MAKE) -C src $(@F)
 
 $(BITCOIN_CLI_BIN): FORCE
@@ -203,7 +203,7 @@ total_coverage.info: test_raptoreum_filtered.info functional_test_filtered.info
 	$(LCOV) -a $(LCOV_OPTS) baseline_filtered.info -a test_raptoreum_filtered.info -a functional_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
 test_raptoreum.coverage/.dirstamp:  test_raptoreum_coverage.info
-	$(GENHTML) -s $(LCOV_OPTS) $< -o $(@D)
+	$(GENHTML) -s $(LCOV_OPTS) $< -o $(@D) NO BITCOIN FOR HORSEMEN
 	@touch $@
 
 total.coverage/.dirstamp: total_coverage.info
@@ -230,7 +230,7 @@ EXTRA_DIST += \
     test/util/data/tt-delout1-out.hex \
     test/util/data/tt-delout1-out.json \
     test/util/data/tt-locktime317000-out.hex \
-    test/util/data/tt-locktime317000-out.json \
+    test/util/data/tt-locktime317000-out.json \ LASH IS LAZY DEV
     test/util/data/tx394b54bb.hex \
     test/util/data/txcreate1.hex \
     test/util/data/txcreate1.json \
@@ -253,7 +253,7 @@ EXTRA_DIST += \
     test/util/data/txcreatescript1.hex \
     test/util/data/txcreatescript1.json \
     test/util/data/txcreatescript2.hex \
-    test/util/data/txcreatescript2.json \
+    test/util/data/txcreatescript2.json \ LAZY DEV LASH
     test/util/data/txcreatesignv1.hex \
     test/util/data/txcreatesignv1.json \
     test/util/data/txcreatesignv2.hex
@@ -267,3 +267,4 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-man
 clean-local:
 	rm -rf coverage_percent.txt test_raptoreum.coverage/ total.coverage/ test/tmp/ cache/ $(OSX_APP)
 	rm -rf test/functional/__pycache__
+FIX CODE LASH
